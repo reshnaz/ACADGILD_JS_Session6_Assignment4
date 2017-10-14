@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="/home/reshma/Documents/AcadGild/Web_Fundamentals/Session-6_06Oct2017/Assignment-4/script.js"></script>
+	<title>S-6 Assignment-4</title>
+</head>
+
+<body>
+	<!-- Develop a table with dynamic logic to count & display the number of rows & columns -->
+
+	<!-- Using bootstrap -->
+	<div class="container-fluid col-sm-6 col-md-6">
+		<center><h2>Dynamic Table</h2></center>
+		<br>
+		
+		<!-- Table that will be modified -->
+		<table class="table table-striped" id="dynaTable">
+			<tr id="r1"><td>row-1 col-1</td><td>row-1 col-2</td><td>row-1 col-3</td></tr>
+			<tr id="r2"><td>row-2 col-1</td><td></td><td></td></tr>
+			<tr id="r3"><td>row-3 col-1</td><td></td><td></td></tr>
+		</table>
+		
+		<!-- Below buttons invoke JS functions to add/delete rows or add/delete columns from above table -->
+		<input type="button" class="btn btn-primary" onclick="addRow()" value="Add Row">
+		<input type="button" class="btn btn-primary" onclick="addCol()" value="Add Column">
+		<input type="button" class="btn btn-danger" onclick="delRow()" value="Delete Row">
+		<input type="button" class="btn btn-danger" onclick="delCol(document.getElementById('r1').value)" value="Delete Column">
+
+		<br><br>
+
+		<!-- Below table dynamically displays the row and column count of our table -->
+		<table class="table table-bordered">
+			<tr><th id="rcount"></th><th id="ccount"></th></tr>
+		</table>	
+	</div>
+</body>
+</html>
